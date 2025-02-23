@@ -1,0 +1,491 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: #EBE4D3;
+    font-family: Arial, sans-serif;
+}
+
+.main-container {
+    width: 80%;  /* Keeps the original width */
+    min-height: 100vh;  /* Ensures it takes at least the full viewport height */
+    background-color: white;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.navbar {
+    background-color: #D4AF35;
+    padding: 8px 100px;
+    text-align: center;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 8px;
+}
+
+.navbar ul li {
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.navbar ul li a {
+    padding: 5px 8px;
+    font-size: 14px;
+    color: #1C4A7E;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-weight: normal;
+}
+
+.navbar ul li a:hover {
+    color: #15467f;
+}
+
+.header-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 15px 100px;
+    border-bottom: 2px solid #ccc;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    width: 60px;
+    height: auto;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    color: #1C4A7E;
+    font-size: 18px;
+}
+
+.uni-name {
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.1;
+}
+
+.motto {
+    font-size: 14px;
+    color: #D4AF35;
+    margin-top: 5px;
+    font-style: italic;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.search-input {
+    padding: 12px 15px;
+    border: none;
+    outline: none;
+    background-color: #ddd;
+    width: 300px;
+    font-size: 16px;
+}
+
+.search-button {
+    background-color: black;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+}
+
+.search-button i {
+    color: white;
+    font-size: 18px;
+}
+
+.main-navbar {
+    background-color: #1C4A7E;
+    padding: 12px 0;
+    transition: background 0.3s;
+    overflow: hidden;
+}
+
+.main-navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0;
+}
+
+.main-navbar ul li {
+    position: relative;
+    white-space: nowrap;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.main-navbar ul li a {
+    padding: 10px 15px;
+    font-size: 14px;
+    color: #D4AF35;
+    text-decoration: none;
+    background-color: transparent;
+    border-radius: 5px;
+    display: block;
+    transition: background 0.3s, color 0.3s;
+}
+
+.main-navbar ul li a:hover {
+    background-color: #D4AF35;
+    color: #1C4A7E;
+}
+
+@media (max-width: 768px) {
+    .main-navbar {
+        padding: 10px 0;
+    }
+    .main-navbar ul {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+    }
+    .main-navbar ul li a {
+        font-size: 13px;
+        padding: 8px 12px;
+    }
+}
+
+.faculty-banner {
+    background: url('atu.jpg') center/cover no-repeat;
+    height: 300px;
+    position: relative;
+}
+
+.faculty-banner .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(28, 74, 126, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding-left: 100px;
+}
+
+.faculty-banner .overlay h1 {
+    color: #D4AF35;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.faculty-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.left-text {
+    width: 90%;
+    padding: 20px;
+}
+
+.left-text h2 {
+    font-size: 28px;
+    color: #1C4A7E; /* Assuming the blue from your CSS */
+}
+
+.left-text p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+}
+
+.left-text .grey-text {
+    color: grey;
+}
+
+.right-box {
+    width: 35%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.inner-box {
+    background-color: #EBE4D3;
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+}
+
+.inner-box li {
+    color: #1C4A7E;
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+
+.inner-box ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.inner-box ul li {
+    font-weight: bold;
+    color: #15467f;
+    padding: 8px 0;
+    transition: color 0.3s ease-in-out;
+}
+
+.inner-box ul li:hover {
+    color: #D4AF35;
+}
+
+.inner-box h3 {
+    color: #15467f;
+}
+
+.inner-box hr {
+    color: #15467f;
+}
+
+.dept-list {
+    margin-left: 60px;
+    margin-top: 30px;
+}
+
+.dept-list a {
+    color: #cc3366;
+    text-decoration: none;
+}
+
+.dept-list a:hover {
+    color: #15467f;
+}
+
+.faculty-info ul li::marker {
+    color: grey; /* Changes the bullet point color */
+    font-size: 1.2em; /* Increases the bullet size */
+}
+
+.faculty-info .underline-text {
+    color: grey;
+    margin-bottom: 0;
+}
+
+.faculty-info h3 {
+    font-size: 22px;
+    font-weight: bold;
+    color: grey;
+}
+
+.faculty-info .prg-list {
+    margin-left: 60px;
+    margin-top: 10px;
+    color: grey;
+}
+
+.faculty-info .prg-list li a {
+    cursor: text;
+    text-decoration: none;
+    color: grey;
+}
+
+.first-h3 {
+    margin-top: 0;
+}
+
+/* FOOTER */
+
+footer {
+    position: relative;
+    background: url('atu.jpg') no-repeat center center/cover;
+    color: white;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(28, 74, 126, 0.85);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    position: relative;
+    z-index: 1;
+}
+
+.footer-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.footer-section h3,
+.footer-section h4 {
+    color: #D4AF35;
+    text-transform: uppercase;
+    border-bottom: 2px solid #D4AF35;
+    margin-bottom: 10px;
+}
+
+.footer-section hr {
+    width: 50px;
+    border-color: #D4AF35;
+}
+
+/* Align image and text in About section */
+.footer-section img {
+    width: 100px;
+    margin-top: 10px;
+}
+
+.footer-section p {
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Align links under "Online Services" and "Quick Links" with h3 */
+.footer-section:nth-child(2) .links,
+.footer-section:nth-child(3) .links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align links to the left under their titles */
+    width: 100%;
+    padding-left: 10px; /* Adjust left padding for alignment */
+}
+
+.links a {
+    color: white;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    padding: 5px 0;
+    transition: 0.3s;
+}
+
+.links a:hover {
+    color: #D4AF35;
+    border-bottom: 2px solid #D4AF35;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+form input {
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: none;
+}
+
+form button {
+    background: #D4AF35;
+    color: #15467f;
+    padding: 15px;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    height: 40px;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #D4AF35;
+    color: #15467f;
+    text-align: center;
+    text-decoration: none;
+    transition: 0.4s ease-in-out;
+}
+
+.social-icon:hover,
+button:hover {
+    background: #1C4A7E;
+    color: #D4AF35;
+}
+
+
+/* Footer Bottom */
+.footer-bottom {
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+/* Align links under "Online Services" and "Quick Links" with h3 */
+.footer-section:nth-child(2),
+.footer-section:nth-child(3) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Aligns everything to the left */
+    text-align: left;
+}
+
+.footer-section:nth-child(2) .links,
+.footer-section:nth-child(3) .links {
+    width: auto; /* Removes full width so it aligns properly */
+    padding-left: 0; /* Removes unnecessary left padding */
+}
+
+.footer-section:nth-child(2) h3,
+.footer-section:nth-child(3) h3 {
+    align-self: flex-start; /* Ensures the title aligns to the left as well */
+}
+
+footer .links {
+    padding-top: 10px;
+}
+
+.links a {
+    font-size: 14px;
+}
